@@ -68,11 +68,11 @@
 
 **Stream processing (Realtime processing)**
 
-- thường được sử dụng nếu chúng ta quan tâm đến thời gian phản hồi nhanh, xử ýl dữ liệu ngay khi nhận được (độ trễ thấp).
+- thường được sử dụng nếu chúng ta quan tâm đến thời gian phản hồi nhanh, xử lý dữ liệu ngay khi nhận được (độ trễ thấp).
 
 **Hệ thông xử lý Big Data**
 
-- Hadoop/MapReduce: Scalable &fault tolerant framework viết bằng Java (Open source, Batch processing)
+- Hadoop/MapReduce: Scalable & fault tolerant framework viết bằng Java (Open source, Batch processing)
 
 - Apache Spark: hệ thống điện toán theo cụm siêu nhanh (lightning fast cluster computing system) (Open source, Batch processing &real-time processing)
 
@@ -127,3 +127,13 @@
 ## 6. Apache Spark Components
 
 <img width="939" alt="Ảnh màn hình 2024-09-05 lúc 21 23 46" src="https://github.com/user-attachments/assets/58565a4e-3681-466d-9723-8c16901052c3">
+
+# Buổi 2: Tổng quan PySpark (07/09/2024)
+
+## Giới thiệu PySpark 
+
+## 2. Lý do chọn PySpark
+
+## 3. Cài đặt & cầu hình PySpark
+
+## 4. Spark Context, Spark Session
