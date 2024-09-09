@@ -130,10 +130,71 @@
 
 # Buổi 2: Tổng quan PySpark (07/09/2024)
 
-## Giới thiệu PySpark 
+## 1. Giới thiệu PySpark 
+
+PySpark là Python API dành cho Spark được phát hành bởi cộng đồng Apache Spark giúp hỗ trợ Python với Spark.
+
+**Đặc điểm chính của PySpark**
+
+- Real time computations: thực hiện tính toán BIG DATA trên thời gian thực, với in-memory processing trong PySpark framework có độ trễ thấp (low
+latency)
+
+- Polyglot: PySpark framework tương thích với các ngôn ngữ khác nhau 
+
+- Caching &disk persistence
+
+- Fast processing
+
+- Works well with RDD
 
 ## 2. Lý do chọn PySpark
 
 ## 3. Cài đặt & cầu hình PySpark
 
 ## 4. Spark Context, Spark Session
+
+**Spark Context**
+
+- SparkContext là thành phần trung tâm giúp thiết lập môi trường thực thi Spark và cung cấp các công cụ cần thiết để làm việc với dữ liệu phân tán trên cụm Spark. (phòng khách)
+
+**Spark Session**
+
+- SparkSession là cổng vào hợp nhất của Spark, giúp đơn giản hóa việc quản lý các chức năng và tài nguyên của Spark, đồng thời cung cấp một API dễ sử dụng cho các thao tác xử lý dữ liệu.
+
+- entry point, chìa khoá để mở cửa bước vào căn phòng hỗ trợ cho data set, data frame, tiền xử lý dữ liệu
+
+- function dùng cho không gian chung (SC) thì có thể dùng trong không gian riêng, nhưng không gian riêng thì chỉ có không gian riêng dùng, trừ khi đc cho phép.
+
+# Buổi 2: PySpark RDDs (07/09/2024)
+
+## 1. Giới thiệu RDDs 
+
+- R (Resilient - khả năng phục hồi)
+
+- D (Distributed - phân phối)
+
+- Ds (Datasets - bộ dữ liệu)
+
+<img width="552" alt="Ảnh màn hình 2024-09-07 lúc 10 27 36" src="https://github.com/user-attachments/assets/16e9c3dd-02e3-4b16-bcfd-6d4d7cff87be">
+
+## 2. RDDs operations
+
+- Có hai thao tác cơ bản có thể được thực hiện trên RDD, đó là: Transformation và Action
+
+**Transformation**
+
+<img width="888" alt="Ảnh màn hình 2024-09-07 lúc 10 40 59" src="https://github.com/user-attachments/assets/fe40f443-03a7-477d-9ca4-5a991c6c6e4d">
+
+**Action**
+
+- Các Action trong Spark là các hàm trả về kết quả cuối cùng của các tính toán RDD. sử dụng lineage graph để tải dữ liệu lên Nó theo một thứ tự cụ thể. Sau khi tất cả các transformation được thực hiện, action trả về kết quả cuối cùng cho Spark Driver. Action là operation cung cấp non-RDD value.
+
+<img width="833" alt="Ảnh màn hình 2024-09-07 lúc 10 43 40" src="https://github.com/user-attachments/assets/3e9f54b0-e316-4414-9f7c-c3ba4b396027">
+
+## 3. Làm việc với RDDs
+
+**Cách tạo RDD**
+
+- Sử dụng parallelize(collection) để tạo ra RDD
+
+- Sử dụng getNumPartitions(): để lấy số lượng partition đang có của RDD.
