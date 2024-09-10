@@ -272,3 +272,29 @@ Chú ý: sc (SparkContext) chỉ khai báo và run 1 lần trong một ứng d�
 - saveAsTextFile("folder_name"): lưu trữ RDD vào trong thư mục folder_name với mỗi partition àl một file riêng lẻ.
 
 **Pair RDDs**
+
+- Các dataset trong thực tế thường đi theo cặp key/value
+
+- Mỗi row là một key ánh xạ đến một hoặc nhiều value
+
+- Pair RDD là một dạng data structure đặc biệt để làm việc với kiểu data dạng này
+
+- Pair RDD: Key là identifier và value là dữ liệu
+
+**Transformation trên pair RDDs**
+
+- reduceByKey(): kết hợp các value cùng key
+
+- sortByKey(): trả về một RDD được sắp xếp theo key
+
+- groupByKey(): nhóm các value có cùng key
+
+- join(): nối RDD dựa trên key của chúng
+
+**Action trên pair RDDs**
+
+- Các action nào dùng dc trên RDDs thì đều dùng đc trên pair RDDs
+
+- CountByKey(): đếm số lượng value cho từng key
+
+- collectAsMap(): trả về key-value pair trong RDD theo định dạng dictionary
