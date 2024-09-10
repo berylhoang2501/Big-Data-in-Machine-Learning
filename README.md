@@ -231,22 +231,6 @@ latency)
 
 ![Ảnh màn hình 2024-09-10 lúc 17 54 35](https://github.com/user-attachments/assets/bb76aa4e-40d8-4c5a-a91b-21471d734fbf)
 
-**Transformation**
-
-- Transformation là các thao tác được áp dụng lên RDD để tạo ra một RDD mới. Tuy nhiên, chúng không thực thi ngay lập tức mà chỉ được đánh dấu (lazy evaluation). Spark chỉ thực hiện các transformation khi có một action gọi đến.
-
--Các transformation là lazy (trì hoãn), nghĩa là Spark chỉ xây dựng một đồ thị tính toán (DAG) mà không thực sự thực hiện việc tính toán cho đến khi action được kích hoạt.
-
-<img width="888" alt="Ảnh màn hình 2024-09-07 lúc 10 40 59" src="https://github.com/user-attachments/assets/fe40f443-03a7-477d-9ca4-5a991c6c6e4d">
-
-**Action**
-
-- Action là thao tác khiến Spark thực sự thực hiện các tính toán trên RDD. Khi một action được gọi, Spark sẽ thực hiện tất cả các transformation trước đó và trả về kết quả hoặc thực hiện một hành động cụ thể như ghi dữ liệu xuống ổ cứng.
-
-- Các Action trong Spark là các hàm trả về kết quả cuối cùng của các tính toán RDD. sử dụng lineage graph để tải dữ liệu lên Nó theo một thứ tự cụ thể. Sau khi tất cả các transformation được thực hiện, action trả về kết quả cuối cùng cho Spark Driver. Action là operation cung cấp non-RDD value.
-
-<img width="833" alt="Ảnh màn hình 2024-09-07 lúc 10 43 40" src="https://github.com/user-attachments/assets/3e9f54b0-e316-4414-9f7c-c3ba4b396027">
-
 ## 3. Làm việc với RDDs
 
 **Cách tạo RDD**
@@ -262,3 +246,29 @@ Chú ý: sc (SparkContext) chỉ khai báo và run 1 lần trong một ứng d�
 # Buổi 2: PySpark RDDs (07/09/2024) (tt)
 
 **RDD operation cơ bản**
+
+***Transformation***
+
+- Transformation là các thao tác được áp dụng lên RDD để tạo ra một RDD mới. Tuy nhiên, chúng không thực thi ngay lập tức mà chỉ được đánh dấu (lazy evaluation). Spark chỉ thực hiện các transformation khi có một action gọi đến.
+
+-Các transformation là lazy (trì hoãn), nghĩa là Spark chỉ xây dựng một đồ thị tính toán (DAG) mà không thực sự thực hiện việc tính toán cho đến khi action được kích hoạt.
+
+<img width="888" alt="Ảnh màn hình 2024-09-07 lúc 10 40 59" src="https://github.com/user-attachments/assets/fe40f443-03a7-477d-9ca4-5a991c6c6e4d">
+
+- flatMap(): trả về 0/ 1/ nhiều giá trị cho từng element trong RDD gốc.
+
+***Action***
+
+- Action là thao tác khiến Spark thực sự thực hiện các tính toán trên RDD. Khi một action được gọi, Spark sẽ thực hiện tất cả các transformation trước đó và trả về kết quả hoặc thực hiện một hành động cụ thể như ghi dữ liệu xuống ổ cứng.
+
+- Các Action trong Spark là các hàm trả về kết quả cuối cùng của các tính toán RDD. sử dụng lineage graph để tải dữ liệu lên Nó theo một thứ tự cụ thể. Sau khi tất cả các transformation được thực hiện, action trả về kết quả cuối cùng cho Spark Driver. Action là operation cung cấp non-RDD value.
+
+<img width="733" alt="Ảnh màn hình 2024-09-07 lúc 10 43 40" src="https://github.com/user-attachments/assets/3e9f54b0-e316-4414-9f7c-c3ba4b396027">
+
+<img width="928" alt="Ảnh màn hình 2024-09-10 lúc 19 57 48" src="https://github.com/user-attachments/assets/dc5798da-bdee-4396-8d6d-7de4a3846c94">
+
+- reduce(function): được sử dụng để tổng hợp các phần tử của regular RDD. Function này giao hoán (thay đổi thứ tự của toán hạng không thay đổi kết quả) và kết hợp
+
+- saveAsTextFile("folder_name"): lưu trữ RDD vào trong thư mục folder_name với mỗi partition àl một file riêng lẻ.
+
+**Pair RDDs**
