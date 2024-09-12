@@ -243,7 +243,7 @@ Chú ý: sc (SparkContext) chỉ khai báo và run 1 lần trong một ứng d�
 
 - Sử dụng textFile("tên file", [minPartitions]) để tạo RDD từ dữ liệu bên ngoài.
 
-# Buổi 2: PySpark RDDs (07/09/2024) (tt)
+# Buổi 3: PySpark RDDs (07/09/2024) (tt)
 
 **RDD operation cơ bản**
 
@@ -298,3 +298,69 @@ Chú ý: sc (SparkContext) chỉ khai báo và run 1 lần trong một ứng d�
 - CountByKey(): đếm số lượng value cho từng key
 
 - collectAsMap(): trả về key-value pair trong RDD theo định dạng dictionary
+
+# Buổi 4: PySpark SQL & DataFrame (12/09/2024) 
+
+<img width="938" alt="Ảnh màn hình 2024-09-12 lúc 19 36 37" src="https://github.com/user-attachments/assets/f112d696-8212-428b-b762-e82d502823f9">
+
+## 1. Giới thiệu Spark SQL
+
+- Là một module của Spark, hỗ trợ truy vấn dữ liệu qua SQL và Hive Query Language
+
+<img width="902" alt="Ảnh màn hình 2024-09-12 lúc 19 37 56" src="https://github.com/user-attachments/assets/fc2febd8-efa4-4ee5-89f5-41ea728cca13">
+
+## 2. Giới thiệu Spark DataFrame
+
+**DataFrame**
+
+-  Giống như bảng trong cơ sở dữ liệu, với các cột đại diện cho feature/attribute và mỗi dòng là một đối tượng dữ liệu.
+
+-  So với RDD hơi khó học của Spark, từ Spark 2.0 trở lên, DataFrame được ưa chuộng hơn vì cú pháp gọn gàng và dễ làm việc.
+
+**PySpark DataFrame cũng chia sẻ một số đặc điểm chung với RDD:**
+
+-  Immutable ni nature (bất biến)
+
+-  Lazy Evaluations
+
+-   Distributed
+
+**Ưu điểm của DataFrame**
+
+<img width="833" alt="Ảnh màn hình 2024-09-12 lúc 19 52 54" src="https://github.com/user-attachments/assets/113a8696-0d83-46c0-a0a3-6738c27b17e2">
+
+## 3. Làm việc với PySpark DataFrame
+
+**Các function cơ bản**
+
+<img width="818" alt="Ảnh màn hình 2024-09-12 lúc 20 25 37" src="https://github.com/user-attachments/assets/e88a4061-0e59-4c07-b5c2-3b1804a69032">
+
+**Các function trên cột**
+
+<img width="758" alt="Ảnh màn hình 2024-09-12 lúc 20 39 00" src="https://github.com/user-attachments/assets/6e82ad60-7111-46ca-8239-2936639be8d4">
+
+**Các function thao tác dữ liệu**
+
+<img width="707" alt="Ảnh màn hình 2024-09-12 lúc 20 51 24" src="https://github.com/user-attachments/assets/b32d336e-c3af-4d13-bffe-f61421f23c61">
+
+- withColumn(‘column_name’, function): tạo cột mới
+
+- withColumnRenamed(‘old_name’, ‘new_name’): đổi tên cột
+
+**Các function làm sạch dữ liệu**
+
+<img width="712" alt="Ảnh màn hình 2024-09-12 lúc 21 10 32" src="https://github.com/user-attachments/assets/c110a4fa-5edd-4458-9096-316d9d2888ff">
+
+**Các function lọc dữ liệu**
+
+<img width="424" alt="Ảnh màn hình 2024-09-12 lúc 21 17 28" src="https://github.com/user-attachments/assets/6961eb00-eb17-434e-ae56-ea13481d5b13">
+
+**Conditional clause**
+
+- .when(<if condition>, <then x>)
+
+- .otherwise()
+
+## 4. Làm việc với PySpark SQL
+
+## 5. Caching & Parquet
