@@ -12,7 +12,7 @@
 
 - Phải giải quyết bài tập và bài thi bằng môi trường Pyspark và big data, không dc dùng sklearn và machine learning truyển thông
 
-# Buổi 1: Tổng quan Big Data (05/09/2024)
+> # Buổi 1: Tổng quan Big Data (05/09/2024)
 
 ## 1. Giới thiệu Big Data 
 
@@ -170,7 +170,7 @@ GraphX giúp phân tích các cấu trúc dữ liệu phức tạp và tìm ra c
 
 - Spark Streaming: Add-on của API Spark cho phép xử lý luồng dữ liệu trực tiếp với khả năng mở rộng và thông lượng cao, giúp xử lý dữ liệu một cách hiệu quả. Hệ thống này có thể hoạt động bằng nhiều thuật toán khác nhau, và sau khi dữ liệu được nhận, nó sẽ được cung cấp cho các file cơ sở dữ liệu hoặc hiển thị trên các dashboard trực tiếp. Spark sử dụng phương pháp micro-batching để thực hiện việc streaming thời gian thực (real-time streaming), chia dữ liệu thành các lô nhỏ để xử lý liên tục. Quá trình này diễn ra qua 3 giai đoạn: Gathering (thu thập dữ liệu), Processing (xử lý dữ liệu), và Data Storage (lưu trữ dữ liệu).
 
-# Buổi 2: Tổng quan PySpark (07/09/2024)
+> # Buổi 2: Tổng quan PySpark (07/09/2024)
 
 ## 1. Giới thiệu PySpark 
 
@@ -213,7 +213,7 @@ latency)
 
 - function dùng cho không gian chung (SC) thì có thể dùng trong không gian riêng, nhưng không gian riêng thì chỉ có không gian riêng dùng, trừ khi đc cho phép.
 
-# Buổi 2: PySpark RDDs (07/09/2024)
+> # Buổi 2: PySpark RDDs (07/09/2024)
 
 ## 1. Giới thiệu RDDs 
 
@@ -243,7 +243,7 @@ Chú ý: sc (SparkContext) chỉ khai báo và run 1 lần trong một ứng d�
 
 - Sử dụng textFile("tên file", [minPartitions]) để tạo RDD từ dữ liệu bên ngoài.
 
-# Buổi 3: PySpark RDDs (07/09/2024) (tt)
+> # Buổi 3: PySpark RDDs (07/09/2024) (tt)
 
 **RDD operation cơ bản**
 
@@ -299,7 +299,7 @@ Chú ý: sc (SparkContext) chỉ khai báo và run 1 lần trong một ứng d�
 
 - collectAsMap(): trả về key-value pair trong RDD theo định dạng dictionary
 
-# Buổi 4: PySpark SQL & DataFrame (12/09/2024) 
+> # Buổi 4: PySpark SQL & DataFrame (12/09/2024) 
 
 <img width="938" alt="Ảnh màn hình 2024-09-12 lúc 19 36 37" src="https://github.com/user-attachments/assets/f112d696-8212-428b-b762-e82d502823f9">
 
