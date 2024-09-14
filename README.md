@@ -355,6 +355,8 @@ Chú ý: sc (SparkContext) chỉ khai báo và run 1 lần trong một ứng d�
 
 <img width="424" alt="Ảnh màn hình 2024-09-12 lúc 21 17 28" src="https://github.com/user-attachments/assets/6961eb00-eb17-434e-ae56-ea13481d5b13">
 
+> # Buổi 4: PySpark SQL & DataFrame (14/09/2024) (tt)
+
 **Conditional clause**
 
 - .when(<if condition>, <then x>)
@@ -404,3 +406,41 @@ Chú ý: sc (SparkContext) chỉ khai báo và run 1 lần trong một ứng d�
 - Truy vấn với GROUP BY
 
 ## 5. Caching & Parquet
+
+**Caching**
+
+- Làm việc với cache
+
+- <DataFrame_name>.cache() : đưa DataFrame vào cache trước Action
+
+- <DataFrame_name> is_cached : xác định trạng thái của DataFrame
+
+- <DataFrame_name>.unpersist() :bỏ DataFrame ra khỏi cache
+  
+**Parquet**
+
+> # Buổi 5: Data preprocessing (14/09/2024)
+
+## 1. Data Cleaning
+
+**Xóa các thuộc tính không liên quan**
+
+- <New_DataFrame> = <DataFrame_name>.drop(*[list_column_names])
+
+**Lọc dữ liệu theo text**
+
+<img width="455" alt="Ảnh màn hình 2024-09-14 lúc 10 49 47" src="https://github.com/user-attachments/assets/f7276842-d67e-48e0-af7e-0028add4d3f4">
+
+**Xóa dữ liệu outlier theo phân phối chuẩn**
+
+<img width="860" alt="Ảnh màn hình 2024-09-14 lúc 10 56 25" src="https://github.com/user-attachments/assets/7578ce7a-c6be-4a5b-8e2f-d5b2c4a77026">
+
+**Xóa dữ liệu NA, NULL**
+
+<img width="870" alt="Ảnh màn hình 2024-09-14 lúc 11 12 48" src="https://github.com/user-attachments/assets/cd8c17a3-9f7d-44ef-9452-2bc57f476729">
+
+**Xóa dữ liệu trùng lắp**
+
+- <DataFrame_name>. drop_duplicates()
+
+## 2. Feature Engineering
