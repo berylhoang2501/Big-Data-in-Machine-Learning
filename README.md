@@ -361,6 +361,37 @@ Chú ý: sc (SparkContext) chỉ khai báo và run 1 lần trong một ứng d�
 
 - .otherwise()
 
+**User defined functions - UDFs**
+
+- Là Python method
+
+- Được đóng gói trong pyspark.sql.functions.udf
+
+- Được lưu trữ như variable
+
+- Được gọi như một function Spark thông thường
+
+**Trực quan hóa dữ liệu**
+
+- <Spark_DataFrame_name>.toPandas(): Chuyển PySpark DataFrame thành DataFrame
+
+- Sử dụng các biểu đồ dành cho DataFrame để vẽ như histogram, barchart, ...
+
+**Các function khác**
+
+- na.fill(value): tìm và thay thế giá trị nul
+
+- replace(old_value, new_value, column_name): tìm giá trị và thay thế bằng giá trị mới
+
+- repartition(): phân vùng dữ liệu của RDD
+
 ## 4. Làm việc với PySpark SQL
 
+**Thực thi SQL Query**
+
+- createOrReplace Temp View("table_name"): tạo table tạm/view
+
+-  sql(query): thực thi truy vấn
+
+-  
 ## 5. Caching & Parquet
