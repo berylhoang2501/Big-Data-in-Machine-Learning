@@ -393,5 +393,14 @@ Chú ý: sc (SparkContext) chỉ khai báo và run 1 lần trong một ứng d�
 
 -  sql(query): thực thi truy vấn
 
--  
+-  Truy vấn có điều kiện với WHERE
+
+- Truy vấn với LIKE
+
+- Truy vấn với SUBSTRING/SUBSTR(column_name, from, length)
+
+- Truy vấn với ORDER BY
+
+- Truy vấn với GROUP BY
+
 ## 5. Caching & Parquet
