@@ -494,3 +494,5 @@ Chú ý: sc (SparkContext) chỉ khai báo và run 1 lần trong một ứng d�
 - Tạo nhiều thuộc tính mới (exploding) cho record
 
 - Pivot
+
+- Join
