@@ -443,4 +443,54 @@ Chú ý: sc (SparkContext) chỉ khai báo và run 1 lần trong một ứng d�
 
 - <DataFrame_name>. drop_duplicates()
 
+> # Buổi 6: Data preprocessing (17/09/2024)
+
+**MinMax Scaling**
+
+**Standard Scaling - Standardization (Z-score Normalization)**
+
+**Log Scaling**
+
+**Dữ liệu bị thiếu (Missing Data)**
+
+- isNull(): để kiểm tra dữ liệu thiếu
+
+- heatmap(): để trực quan lượng dữ liệu thiếu của thuộc tính
+
+**Xoá dữ liệu thiếu**
+
+- Giá trị thiếu của thuộc tính rất ít >-xóa dòng
+
+- Giá trị thiếu của thuộc tính nhiều (> tỷ lệ)-> xóa thuộc tính (xóa cột)
+
+**Điền dữ liệu khi bị thiếu**
+
+- Rule Based: giá trị điền dựa trên business logic
+
+- Statistics Based: giá trị điền có thể àl mean, median...
+
+- Model Based: giá trị điền là giá trị dự đoán từ model (sử dụng model để dự đoán dữ liệu)
+
+- fillna(value, subset=None)
+
 ## 2. Feature Engineering
+
+**Có thể tạo ra tính năng mới**
+
+- Dựa trên các công thức tính toán (cộng, trừ, nhân, chia, tỷ lệ...)
+
+- Dùng regular expression extract (pyspark.sql .functions.regexp_extract)
+
+**regexp_extract(column_name, regex, group_number)**
+
+**TimeFeature**
+
+**Trích xuất tính năng (Extracting Feature)**
+
+- Trích xuất text thành feature mới
+
+- Cắt chuỗi (splitting) thành feature mới
+
+- Tạo nhiều thuộc tính mới (exploding) cho record
+
+- Pivot
