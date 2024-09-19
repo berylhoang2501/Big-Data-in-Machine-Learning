@@ -443,7 +443,7 @@ Chú ý: sc (SparkContext) chỉ khai báo và run 1 lần trong một ứng d�
 
 - <DataFrame_name>. drop_duplicates()
 
-> # Buổi 6: Data preprocessing (17/09/2024)
+> # Buổi 6: Data preprocessing (17/09/2024) (tt 1)
 
 **MinMax Scaling**
 
@@ -496,3 +496,90 @@ Chú ý: sc (SparkContext) chỉ khai báo và run 1 lần trong một ứng d�
 - Pivot
 
 - Join
+
+> # Buổi 7: Data preprocessing (19/09/2024) (tt 2)
+
+**Binarizing, Bucketing & Encoding**
+
+- Binarizing: Là kỹ thuật tạo ra một feature mới từ một feature đang có nhưng dưới dạng nhị phân (0 hoặc 1) theo một ngưỡng cho trước (mặc định: threshold = 0)
+
+- Bucketing: Là kỹ thuật tối ưu hóa phân tách dữ liệu thành các phần để dễ quản ýl hơn (buckets), để phân vùng dữ liệu (data partitioning). Động lực là để tối ưu hóa hiệu suất của truy vấn join query bằng cách tránh xáo trộn (avoiding shuffles) các bảng trong join. Các kết quả của Bucketing ít trao đổi hơn, vì việc xáo trộn có thể không cần thiết - cả hai DataFrame có thể đã được đặt trong cùng một phân vùng (partition).
+
+- StringIndexer
+
+- One hot encoding: là kỹ thuật mã hóa các thuộc tính phân loại dưới dạng một one-hot numeric array.
+
+> # Buổi 7: Spark MLlib (19/09/2024)
+
+<img width="1128" alt="Ảnh màn hình 2024-09-19 lúc 20 03 11" src="https://github.com/user-attachments/assets/e5aa06f1-b097-41e2-a6db-943ec3114efc">
+
+## 1. Giới thiệu Spark MLlib
+
+**Spark MLlib**
+
+- Là một thư viện Machine Learning.
+
+- Là một component phía trên Spark Core để phân tích dữ liệu bằng các thuật toán Machine Learning.
+
+- Hoạt động trên các hệ thống phân tán (distributed system) và có thể mở rộng.
+
+- Giúp thực hiện các công việc classification, clustering, linear regression, và các thuật toán machine-learning khác với Spark MLlib.
+
+**MLlib có 3 chức năng ML**
+
+- Data preparation: Feature extraction, transformation, selection, hashing of categorical features, natural language processing methods
+
+- Machine learning algorithms: Regression, classification, clustering algorithms...
+
+- Utilities: Descriptive statistics, chisquare testing, linear algebra (sparse &dense matrices, vectors), model evaluation methods
+
+**MLlib cung cấp các tool**
+
+- ML Algorithms: classification, regression, clustering &collaborative filtering
+
+- Featurization: feature extraction, transformation, dimensionality
+reduction &selection
+
+- Pipelines: constructing, evaluating, tuning ML Pipelines
+
+- Persistence: saving &load algorithms, models & Pipelines
+
+- Utilities: linear algebra, statistics, data handling...
+
+## 2. Spark MLlib algorithms
+
+<img width="762" alt="Ảnh màn hình 2024-09-19 lúc 20 17 06" src="https://github.com/user-attachments/assets/1d15e759-cba1-4003-bb40-7d6e5191ffd2">
+
+**Công việc của các nhóm thư viện**
+
+- milib.classification: hỗ trợ classification, giúp chúng ta phân loại với: binary classification, multiclass classification analysis, ví dụ như Random Forest, Naive Bayes, Decision Tree...
+
+- mllib.clustering: hỗ trợ việc clustering, giúp ta nhóm các subset của các thực thể chúng này với các thực thể khác dựa trên các đặc điểm chung của chúng.
+
+- mllib.regression: hỗ trợ việc tìm ra các mối quan hệ và sự phụ thuộc giữa các variables.
+
+- mllib.linalg: MLlib utilities dùng cho linear algebra.
+
+- mllib.fpm (Frequent pattern matching): hỗ trợ việc khai thác các frequent items, itemsets, subsequences hoặc các substructures khác (thường là một trong những bước đầu tiên để phân tích large-scale dataset).
+
+- mllib.recommendation: Collaborative filtering package thường được sử dụng cho các recommender system. Các kỹ thuật này giúp điền vào các missing entries của một user item association matrix.
+
+## 3. Xây dựng model
+
+**Các bước thực hiện**
+
+- Xác định vấn đề
+
+- Chuẩn bị &chuẩn hóa dữ liệu, xác định inputs, output
+
+- Chuẩn bị train/test dataset
+
+- Xây dựng model với train dataset
+
+- Đánh giá model với test dataset
+
+- Lưu trữ & tải model
+
+- Dự đoán mới
+
+**Chuẩn bị & chuẩn hóa dữ liệu, xác định inputs, output**
