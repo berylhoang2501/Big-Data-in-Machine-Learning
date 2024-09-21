@@ -583,3 +583,29 @@ reduction &selection
 - Dự đoán mới
 
 **Chuẩn bị & chuẩn hóa dữ liệu, xác định inputs, output**
+
+> # Buổi 8: PySpark ML - Linear &Logistic Regression, Pipeline (21/09/2024)
+
+## 1. Linear Regression
+
+- Phân tích hồi quy tuyến tính được sử dụng để dự đoán giá trị của một biến dựa trên giá trị của một hay nhiều biến khác.
+
+- Biến muốn dự đoán được gọi là biến phụ thuộc (dependent variable).
+
+- Biển đang sử dụng để dự đoán giá trị của biến khác được gọi là biến độc lập (independent variable).
+
+## 2. Logistic Regression
+
+- Logistic Regression là một thuật toán thuộc nhóm Supervised Learning sử dụng rất hiệu quả cho classification.
+
+- Logistic Regression (còn gọi là Logit Regression) thường được sử dụng để ước tính xác suất mà một mẫu thuộc về một lớp cụ thể (ví dụ: xác suất một khách hàng có mua hàng?)
+
+<img width="665" alt="Ảnh màn hình 2024-09-21 lúc 09 35 28" src="https://github.com/user-attachments/assets/eeb4a274-08e2-4316-a6ef-e413c841ae9d">
+
+**Đánh giá**
+
+- Confusion Matrix
+
+<img width="680" alt="Ảnh màn hình 2024-09-21 lúc 09 36 17" src="https://github.com/user-attachments/assets/8a8c85e4-c900-4c3e-9182-dbc3a2375a73">
+
+## 3. Pipeline
