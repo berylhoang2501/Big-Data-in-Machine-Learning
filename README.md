@@ -608,4 +608,22 @@ reduction &selection
 
 <img width="680" alt="Ảnh màn hình 2024-09-21 lúc 09 36 17" src="https://github.com/user-attachments/assets/8a8c85e4-c900-4c3e-9182-dbc3a2375a73">
 
+> # Buổi 9: PySpark ML - Linear &Logistic Regression, Pipeline (24/09/2024) (tt)
+
 ## 3. Pipeline
+
+- Một pipeline mô tả hoặc mô hình hóa quy trình Machine Learning: code, release, thực hiện trích xuất dữ liệu, tạo mô hình huấn luyện và điều chỉnh thuật toán.
+
+- Một pipline là một loạt các thao tác cần thực hiện.
+
+- Chúng ta có thể áp dụng từng thao tác riêng lẻ hoặc có thể áp dụng pipeline
+
+> # Buổi 9: PySpark Mllib – Tree Models (24/09/2024)
+
+## 1 Decision Tree
+
+## 2. RandomForest
+
+<img width="750" alt="Ảnh màn hình 2024-09-24 lúc 20 51 25" src="https://github.com/user-attachments/assets/7e75a074-5f2c-4157-acf7-fb370d96ddde">
+
+## 3. Gradient-BoostedTrees
