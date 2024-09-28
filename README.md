@@ -627,3 +627,21 @@ reduction &selection
 <img width="750" alt="Ảnh màn hình 2024-09-24 lúc 20 51 25" src="https://github.com/user-attachments/assets/7e75a074-5f2c-4157-acf7-fb370d96ddde">
 
 ## 3. Gradient-BoostedTrees
+
+> # Buổi 11: PySpark Mllib – Tree Models (24/09/2024)
+
+## 2. Recommender System - ALS
+
+**Có hai recommender system phổ biến nhất là Collaborative Filtering (CF) và Content-Based**
+
+<img width="636" alt="Ảnh màn hình 2024-09-28 lúc 08 10 03" src="https://github.com/user-attachments/assets/e385fa69-a223-4e4a-87ae-78c62317021e">
+
+- Collaborative filtering tạo ra các đề xuất dựa trên kiến thức của người dùng về thái độ đối với các item, nó sử dụng kiến thức của số đông ("wisdom of the crowd") để đề xuất các item.
+
+- Content-based recommender system tập trung vào các thuộc tính của item và cung cấp cho người dùng các đề xuất dựa trên sự tương tự giữa chúng.
+
+**Rating: có 2 loại là explicit và implicit**
+
+<img width="1013" alt="Ảnh màn hình 2024-09-28 lúc 08 23 21" src="https://github.com/user-attachments/assets/a22c4a2b-29cc-4f15-98fd-76a816cda238">
+
+## 3. Association rules- FPGrowth
