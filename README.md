@@ -608,7 +608,7 @@ reduction &selection
 
 <img width="680" alt="Ảnh màn hình 2024-09-21 lúc 09 36 17" src="https://github.com/user-attachments/assets/8a8c85e4-c900-4c3e-9182-dbc3a2375a73">
 
-> # Buổi 9: PySpark ML - Linear &Logistic Regression, Pipeline (24/09/2024) (tt)
+> # Buổi 9: PySpark ML - Linear & Logistic Regression, Pipeline (24/09/2024) (tt)
 
 ## 3. Pipeline
 
@@ -626,9 +626,29 @@ reduction &selection
 
 <img width="750" alt="Ảnh màn hình 2024-09-24 lúc 20 51 25" src="https://github.com/user-attachments/assets/7e75a074-5f2c-4157-acf7-fb370d96ddde">
 
+> # Buổi 10: PySpark Mllib – Tree Models (26/09/2024) (tt)
+
 ## 3. Gradient-BoostedTrees
 
-> # Buổi 11: PySpark Mllib – Tree Models (24/09/2024)
+- Boosting" hỗ trợ cho các mô hình Machine Learning để cải thiện độ chính xác của dự đoán.
+
+- Boosting algorithm (Thuật toán tăng cường) là một trong những thuật toán được sử dụng khá rộng rãi nhằm mục đích tăng cường thuật toán để cải thiện độ chính xác của các mô hình.
+
+<img width="818" alt="Ảnh màn hình 2024-10-01 lúc 00 22 54" src="https://github.com/user-attachments/assets/361a0acb-4711-409b-997c-f809cc9034d7">
+
+> # Buổi 10: PySpark Mllib - Clustering, Recommender System (26/09/2024)
+
+## 1. Clustering K-Means
+
+<img width="807" alt="Ảnh màn hình 2024-10-01 lúc 00 25 47" src="https://github.com/user-attachments/assets/514cd390-d244-481c-9467-e8dd32ace894">
+
+- Cách tính khoảng cách: Euclidean Distance, Manhattan Distance, Cosine Similarity
+
+**Sử dụng kết quả phân cụm**
+
+<img width="727" alt="Ảnh màn hình 2024-10-01 lúc 00 27 31" src="https://github.com/user-attachments/assets/47d1eec2-b228-41ee-b7e1-6d064e2b8dc5">
+
+> # Buổi 11:  PySpark Mllib - Clustering, Recommender System (24/09/2024)
 
 ## 2. Recommender System - ALS
 
@@ -644,4 +664,4 @@ reduction &selection
 
 <img width="1013" alt="Ảnh màn hình 2024-09-28 lúc 08 23 21" src="https://github.com/user-attachments/assets/a22c4a2b-29cc-4f15-98fd-76a816cda238">
 
-## 3. Association rules- FPGrowth
+## 3. Association rules - FPGrowth
