@@ -665,3 +665,14 @@ reduction &selection
 <img width="1013" alt="Ảnh màn hình 2024-09-28 lúc 08 23 21" src="https://github.com/user-attachments/assets/a22c4a2b-29cc-4f15-98fd-76a816cda238">
 
 ## 3. Association rules - FPGrowth
+
+**Association rule learning**
+
+- Là một phương pháp Machine Learning dựa trên trên quy tắc để khám phá mối quan hệ giữa các biến trong cơ sở dữ liệu lớn. Nó dùng để xác định các quy tắc mạnh được phát hiện trong cơ sở dữ liệu bằng cách sử dụng một số thuật toán thú vị.
+
+**FP-growth algorithm (FP: frequent pattern)**
+
+![Ảnh màn hình 2024-10-01 lúc 00 54 08](https://github.com/user-attachments/assets/2a2ff43a-6761-4135-8773-d2b204ff8ab6)
+
+
+
