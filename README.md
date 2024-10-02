@@ -675,4 +675,75 @@ reduction &selection
 ![Ảnh màn hình 2024-10-01 lúc 00 54 08](https://github.com/user-attachments/assets/2a2ff43a-6761-4135-8773-d2b204ff8ab6)
 
 
+> # Buổi 12:  NLP (01/10/2024)
+
+## 1. Giới thiệu
+
+- Xử lý ngôn ngữ tự nhiên (NLP) là thành phần chính trong nhiều hệ thống khoa học dữ liệu (phải hiểu hoặc suy luận về một văn bản).
+
+- Ví dụ một số ứng dụng: Sentiment analysis, Clustering News Articles (phân cụm tin tức), Suggesting similar books (đề xuất các sách tương tự), Grouping Legal Documents (phân nhóm tài liệu), Analyzing Consumer Feedback (phân tích phản hồi của khách hàng), Spam Email Detection (phát hiện mail rác)
+
+**Một số quy trình NLP cơ bản**
+
+- Compile al documents (Corpus, tổng hợp tât cả tài liệu)
+
+- Featurize the words to numerics (chuyển đổi từ thành số)
+
+- Compare features of documents (so sánh thuộc tính của các tài liệu)
+
+- Spark có rất nhiều công cụ pyspark.ml.feature để hỗ trợ toàn bộ quá trình này và làm cho công việc trở nên dễ dàng hơn, như:
+
+Tokenizer 
+
+StopWordsRemover 
+
+NGram
+
+CountVectorizer
+
+TF-IDF
+
+**Tokenize**
+
+- Hiểu đơn giản, Tokenization là quá trình lấy văn bản (ví dụ như một câu) và chia nó thành các term riêng lẻ (thường là các từ). Một lớp Tokenizer cung cấp chức năng này.
+
+**StopWordsRemover**
+
+- stop word là những từ nên được loại bỏ từ input, bởi vì các từ này xuất hiện thường xuyên và không mang nhiều ý nghĩa. ví dụ như, "is", "at", "which", "on"
+
+**Ngram**
+
+- Tham số n được sử dụng để xác định số lượng term trong mỗi n-gram. Output sẽ bao gồm một chuỗi n-gram trong đó mỗi n-gram được biểu diễn bằng một chuỗi phân tách bằng dấu cách của n từ liên tiếp (n consecutive words).
+
+**CountVectorizer**
+
+- Lớp CountVectorizer và CountVectorizerModel giúp chuyển đổi một bộ sưu tập văn bản thành một vector đếm. Kết quả khi chuyển đổi biến phân loại thành một vector đếm là one-hot encoded vector. Kích thước của vector sẽ bằng với sốloại khác nhau mà chúng ta có.
+
+- Khi không có a-priori dictionary, CountVectorizer có thể được sử dụng như Estimator để trích xuất
+từ vựng và tạo ra CountVectorizerModel.
+
+**TF-IDF**
+
+- Để hạn chế những từ phổ biến này từ việc áp đảo mô hình, một hình thức chuẩn hóa có thể được sử dụng. TF-IDF có tác dụng làm giảm giá trị của các từ phổ biển, đồng thời tăng trọng số của các từ không xảy ra trong nhiều tài liệu.
+
+## 2. Các công cụ cho NLP
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
